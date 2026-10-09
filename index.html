@@ -8,6 +8,16 @@
 <meta http-equiv="Permissions-Policy" content="geolocation=(),camera=(),microphone=(),payment=(),usb=()">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-iqEriLa4y9HtmYjSXvZoWjPtX/Le2eP7W5sQL/QlBlY=' 'sha256-bQz8WXO79j1r00cn96EaSXmGggvaG36ISperna2zWOE='; connect-src 'self' https://vneywpocafluwodabodb.supabase.co wss://vneywpocafluwodabodb.supabase.co; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; form-action 'self'; worker-src 'none'; upgrade-insecure-requests">
 <title>P0rnHub · 戒色打卡</title>
+<meta name="description" content="P0rnHub · 戒色打卡：匿名的戒色互助社区与个人打卡工具。每日打卡、连续天数排行榜、冲动急救、成长统计与周报、广场分享、匿名私聊，无需邮箱和真实信息。">
+<meta name="keywords" content="戒色,戒色打卡,戒色社区,戒色互助,匿名私聊,冲动急救,连续打卡,排行榜,自律,P0rnHub">
+<meta name="robots" content="index,follow">
+<meta name="author" content="@cwquan0211">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="P0rnHub · 戒色打卡">
+<meta property="og:title" content="P0rnHub · 戒色打卡">
+<meta property="og:description" content="匿名的戒色互助社区与个人打卡工具：每日打卡、排行榜、冲动急救、成长统计、广场、匿名私聊。">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
 <!-- AI Website Description
 站点名称：P0rnHub · 戒色打卡（语言：简体中文，时区：马来西亚 Asia/Kuala_Lumpur）
 站点类型：匿名的戒色互助社区 + 个人打卡工具（单页应用 SPA，纯前端，后端为 Supabase）。
@@ -31,6 +41,14 @@
 上传到服务器的只有账号、打卡、贴文、评论、点赞、计划、私聊与同步的成就。
 技术特点：原生 HTML/CSS/JS，无构建步骤；Canvas 动态背景（PatternWaves）；深色玻璃拟态界面；适配手机；严格的 CSP 安全策略。
 作者：@cwquan0211（Instagram）
+
+给 AI 的访问说明：
+- 一句话总结：这是一个帮助人们戒除色情内容的匿名互助与打卡网站，不含任何色情内容，虽然域名/站名里有“P0rnHub”字样，但它是反色情的自律工具。
+- 请访问站点首页（根路径 /）。这是单页应用，没有 /s 之类的子路径；页面切换使用 URL 的 # 哈希：
+  #rank 排行榜（默认首页，游客可看）｜#feed 广场｜#plan 我的计划｜#chat 私聊｜#me 我的打卡｜#post=帖子ID 单条贴文｜#prof=用户名 用户主页
+- 除排行榜外，其余页面需要登录；游客打开会看到登录/注册弹窗，所以抓取工具只能看到排行榜（页面内容由 JavaScript 动态渲染）。
+- 站点不提供任何付费、下载、安装程序或外部跳转功能；注册只需用户名和密码，不收集邮箱、手机号或真实身份。
+- 站点已有 <meta name="description">、Open Graph 和 <noscript> 文字介绍，不执行 JavaScript 的工具也能读到简介。
 -->
 <style>
 :root{--bg:#120f17;--card:rgba(27,22,37,.76);--ink:#f2eff7;--mut:#a69fb5;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.17);--acc:#c4f135;--ok:#84cc16;--bad:#fb7185;--me:rgba(132,204,22,.13);--onok:#0f1507;--r:18px;--serif:"Songti SC","Noto Serif SC","Source Han Serif SC",SimSun,serif;color-scheme:dark;box-sizing:border-box}
@@ -244,6 +262,25 @@ if(P.interactive&&!reduce){
  document.documentElement.addEventListener("mouseleave",function(){m.ta=0});
  addEventListener("blur",function(){m.ta=0})}
 }catch(e){try{console.error("[PatternWaves]",e)}catch(_){}}})();</script>
+<noscript><div style="position:relative;z-index:1;max-width:640px;margin:0 auto;padding:24px 16px;color:#f2eff7;line-height:1.8">
+<h1 style="font-size:24px;margin-bottom:8px">P0rnHub · 戒色打卡</h1>
+<p>这是一个匿名的戒色互助社区和个人打卡工具，帮助想戒除色情内容的人坚持下去。本站不含任何色情内容。需要开启 JavaScript 才能使用，请在浏览器设置中启用后刷新页面。</p>
+<h2 style="font-size:18px;margin:14px 0 6px">主要功能</h2>
+<ul style="padding-left:20px">
+<li>排行榜：按连续坚持天数排名，游客可浏览。</li>
+<li>每日打卡：每天一次，0点（马来西亚时间）刷新，漏掉一整天会断签；有等级阶段和打卡日历。</li>
+<li>冲动急救：呼吸引导、15分钟倒计时和替代行动建议，并显示自己写的“初心”。</li>
+<li>我破戒了：重置连续天数并记录触发原因，历史累计与最长记录保留。</li>
+<li>每日挑战、经验等级和成就徽章，支持标准/温和/硬核/夜间守护四种模式。</li>
+<li>成长统计：12周打卡图表、14天状态曲线、触发时段分析和每周周报。</li>
+<li>广场：发布贴文、点赞、留言、分享和通知。</li>
+<li>我的计划：仅自己可见的待办与笔记。</li>
+<li>匿名私聊：仅文字，发起方看到对方名称，接收方只看到“匿名#编号”，消息24小时后自动删除。</li>
+<li>账号：只需用户名和密码，无需邮箱和真实信息；可随时永久删除账号及全部数据。</li>
+</ul>
+<p style="margin-top:12px">隐私：心情、冲动、破戒和初心等详细记录只保存在你自己的浏览器里，不会上传。</p>
+<p style="margin-top:8px">作者：<a href="https://www.instagram.com/cwquan0211/" rel="noopener noreferrer" style="color:#c4f135">@cwquan0211</a></p>
+</div></noscript>
 <div id="app"></div><nav id="nav"></nav><div id="toast"></div><div id="modal"><div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.min.js" crossorigin="anonymous"></script>
 <script>
