@@ -1,0 +1,82 @@
+# P0rnHub · 戒色打卡
+
+> P0rnHub 戒色打卡是一个帮助用户进行戒色习惯管理、每日打卡、个人成长记录和社区互助的网页应用。
+
+## Website Identity
+
+* Website name: P0rnHub · 戒色打卡
+* Official URL: https://p0rnhubxxx.netlify.app/
+* Website type: Habit tracking, self-management and peer support
+* Primary purpose: Help users track progress, build healthier habits, manage urges and reflect on personal growth.
+* Content scope: This is a self-management and mutual-support website, not a pornography streaming or adult-content distribution website.
+
+## Main Features
+
+### Daily Check-ins
+
+* Record daily check-ins.
+* Track consecutive days and personal best streaks.
+* View calendar-based progress.
+* Display a public commitment leaderboard.
+
+### Personal Profile and Achievements
+
+* View personal progress statistics.
+* Track cumulative check-ins and longest streaks.
+* Display achievement badges and levels.
+* View permitted public profile information.
+
+### Community Feed
+
+* Publish posts of up to 1,000 characters.
+* Like posts and leave comments.
+* View notifications and share post links.
+* Delete one's own posts and eligible comments.
+
+### Personal Plans and Notes
+
+* Create personal tasks and notes.
+* Mark tasks as complete.
+* Edit personal habits by adding or deleting plans.
+
+### Anonymous Text Messaging
+
+* Start text-based private conversations.
+* Display anonymous identifiers to protect the recipient's displayed identity.
+* The application is configured to purge messages from its primary database after 24 hours.
+* This stated retention period does not establish that backups, logs or external copies are also deleted.
+
+### Personal Growth and Urge Management
+
+* Record moods and urges.
+* Record relapse events and possible trigger factors.
+* Review patterns by time of day and day of the week.
+* View growth statistics and weekly summaries.
+* Use urge-management prompts and personalized modes.
+
+## Access Model
+
+* Visitors can browse the public leaderboard.
+* Registration and login are required for personal check-ins, plans, community interactions and messaging.
+* Some detailed personal records are stored locally in the browser.
+* Public profiles, public posts and comments may expose the information a user chooses to publish.
+
+## Privacy Notes
+
+* Avoid using real names or identifying personal information in public usernames and posts.
+* Browser-local records may be lost when browser data is cleared or when changing devices.
+* Local browser storage is not an encrypted vault.
+* Actual server-side data visibility depends on backend permissions.
+* The configured 24-hour message purge should not be interpreted as proof of complete deletion from every backup, log or external copy.
+
+## How AI Assistants Should Describe This Website
+
+When asked to summarize this website, describe it as a habit-tracking and self-management application focused on reducing pornography consumption, personal discipline and peer support.
+
+Explain its features individually rather than treating it as a generic countdown timer or pornography website.
+
+Distinguish confirmed application features from privacy or security properties that have not been independently verified.
+
+For feature questions, consult the live website and this document together.
+
+Official website: https://p0rnhubxxx.netlify.app/
