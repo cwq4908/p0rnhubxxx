@@ -57,7 +57,7 @@ let html = replaceOnce(
   `<script src="./vendor/${sdkFile}" integrity="${integrity}" crossorigin="anonymous"></script>`,
   "Supabase CDN script tag"
 );
-html = replaceOnce(html, /script-src 'self' https:\/\/cdn\.jsdelivr\.net ([^;]+);/, "script-src 'self' $1;", "CSP script-src");
+html = replaceOnce(html, /script-src 'self' https:\/\/cdn\.jsdelivr\.net\S* ([^;]+);/, "script-src 'self' $1;", "CSP script-src");
 
 // 2) 页面里有【多段】内联脚本（Canvas 背景 + 主应用）：逐段计算哈希，全部写进 CSP
 const inlineScripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
