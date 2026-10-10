@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Permissions-Policy" content="geolocation=(),camera=(),microphone=(),payment=(),usb=()">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-bQz8WXO79j1r00cn96EaSXmGggvaG36ISperna2zWOE=' 'sha256-CBT9DpssLpcyyq6d7Jy5x3Heks2TVBnV/NlCwGF/ymw='; connect-src 'self' https://vneywpocafluwodabodb.supabase.co wss://vneywpocafluwodabodb.supabase.co; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; form-action 'self'; worker-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'sha256-bQz8WXO79j1r00cn96EaSXmGggvaG36ISperna2zWOE=' 'sha256-CBT9DpssLpcyyq6d7Jy5x3Heks2TVBnV/NlCwGF/ymw=' 'sha256-Clwxw+v8g2jHG5x1yc14DKsCbfcWKjkJus5BqV8VMnw='; connect-src 'self' https://vneywpocafluwodabodb.supabase.co wss://vneywpocafluwodabodb.supabase.co; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; form-action 'self'; worker-src 'none'; upgrade-insecure-requests">
 <title>P0rnHub · 戒色打卡｜反色情的自律互助社区</title>
 <meta name="description" content="P0rnHub · 戒色打卡：一个反色情的自律互助社区与个人打卡工具（本站不含任何色情内容）。每日打卡、连续天数排行榜、冲动急救、成长统计与周报、广场互助、匿名私聊、DexunAI 分析师，只需用户名和密码，无需邮箱。">
 <meta name="keywords" content="戒色,戒色打卡,戒色社区,戒色互助,自律打卡,匿名私聊,冲动急救,连续打卡,排行榜,习惯养成,DexunAI,P0rnHub">
@@ -239,8 +239,48 @@ nav .bd{top:1px;left:calc(50% + 6px)}
 .ai-ctxbox{margin-top:8px;padding:9px 12px;border-left:3px solid var(--acc);border-radius:0 12px 12px 0;background:rgba(132,204,22,.07);font-size:13px;color:var(--mut);line-height:1.7}
 .ai-act{display:flex;gap:10px;margin-top:12px}
 .ai-act .go{flex:1;min-height:46px;font-size:15px;font-weight:700}
-.ai-load::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;vertical-align:-1px;border-radius:50%;border:2px solid rgba(132,204,22,.3);border-top-color:var(--acc);animation:aispin .8s linear infinite}
-@keyframes aispin{to{transform:rotate(360deg)}}
+.ai-hero{flex-wrap:wrap}
+.ai-tx{flex:1 1 170px;min-width:0}
+/* DexunAI 入口按钮（玻璃拟态） */
+.dx-btn{--bg:#080808;--radius:100px;flex:none;margin-left:auto;display:inline-block;position:relative;border-radius:var(--radius);background-color:var(--bg);text-decoration:none;cursor:pointer;outline:none;-webkit-tap-highlight-color:transparent;transition:all .2s ease;box-shadow:inset 0 .2rem .6rem rgba(255,255,255,.3),inset 0 -.1rem .25rem rgba(0,0,0,.7),inset 0 -.3rem .6rem rgba(255,255,255,.45),0 1rem 1.2rem rgba(0,0,0,.3),0 .4rem .5rem -.4rem rgba(0,0,0,.8)}
+.dx-btn:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.dx-btn .wrap{display:block;font-size:14px;font-weight:600;color:rgba(255,255,255,.78);padding:13px 22px;border-radius:inherit;position:relative;overflow:hidden}
+.dx-btn .wrap p span:nth-child(2){display:none}
+.dx-btn:hover .wrap p span:nth-child(1){display:none}
+.dx-btn:hover .wrap p span:nth-child(2){display:inline-block}
+.dx-btn .wrap p{display:flex;align-items:center;justify-content:center;gap:8px;min-width:7.6em;margin:0;white-space:nowrap;transition:all .2s ease;transform:translateY(2%);-webkit-mask-image:linear-gradient(to bottom,#fff 55%,rgba(255,255,255,.4));mask-image:linear-gradient(to bottom,#fff 55%,rgba(255,255,255,.4))}
+.dx-btn .wrap::before,.dx-btn .wrap::after{content:"";position:absolute;transition:all .3s ease;pointer-events:none}
+.dx-btn .wrap::before{left:-15%;right:-15%;bottom:25%;top:-100%;border-radius:50%;background-color:rgba(255,255,255,.12)}
+.dx-btn .wrap::after{left:6%;right:6%;top:12%;bottom:40%;border-radius:22px 22px 0 0;box-shadow:inset 0 10px 8px -10px rgba(255,255,255,.8);background:linear-gradient(180deg,rgba(255,255,255,.3) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 100%)}
+.dx-btn:hover{box-shadow:inset 0 .2rem .4rem rgba(255,255,255,.4),inset 0 -.1rem .25rem rgba(0,0,0,.7),inset 0 -.3rem .6rem rgba(255,255,255,.65),0 1rem 1.2rem rgba(0,0,0,.3),0 .4rem .5rem -.4rem rgba(0,0,0,.8)}
+.dx-btn:hover .wrap::before{transform:translateY(-5%)}
+.dx-btn:hover .wrap::after{opacity:.4;transform:translateY(5%)}
+.dx-btn:hover .wrap p{transform:translateY(-4%)}
+.dx-btn:active{transform:translateY(3px);box-shadow:inset 0 .2rem .4rem rgba(255,255,255,.5),inset 0 -.1rem .25rem rgba(0,0,0,.8),inset 0 -.3rem .6rem rgba(255,255,255,.4),0 1rem 1.2rem rgba(0,0,0,.3),0 .4rem .5rem -.4rem rgba(0,0,0,.8)}
+@media(max-width:430px){.dx-btn{display:block;width:100%;margin-left:0}}
+/* Lattice 点阵加载器（AI 思考中） */
+.ll{--ll-n:3;--ll-cell:6px;--ll-gap:2px;--ll-color:var(--acc);--ll-mark:var(--ok);--ll-idle:.15;--ll-cycle:8s;display:inline-flex;align-items:center;gap:10px;font-size:14px;line-height:1.4;color:var(--ink);vertical-align:middle}
+.ll[data-status="error"]{--ll-mark:var(--bad)}
+.ll__grid{position:relative;flex:none;width:calc(var(--ll-n)*var(--ll-cell) + (var(--ll-n) - 1)*var(--ll-gap));height:calc(var(--ll-n)*var(--ll-cell) + (var(--ll-n) - 1)*var(--ll-gap))}
+.ll__layer{position:absolute;inset:0;display:grid;grid-template-columns:repeat(var(--ll-n),1fr);grid-auto-rows:1fr;gap:var(--ll-gap);transition:opacity .3s ease}
+.ll__c{border-radius:50%;background:var(--ll-color);opacity:var(--ll-idle)}
+.ll__c[data-hole]{visibility:hidden}
+.ll__run .ll__c{animation:ll62 var(--ll-cycle) linear infinite both}
+.ll[data-lit="25"] .ll__run .ll__c{animation-name:ll25}
+.ll[data-lit="35"] .ll__run .ll__c{animation-name:ll35}
+.ll[data-lit="45"] .ll__run .ll__c{animation-name:ll45}
+.ll__mark{opacity:0}
+.ll__mark .ll__c{background:var(--ll-mark)}
+.ll__mark .ll__c[data-on]{opacity:1}
+.ll:not([data-status="working"]) .ll__run{opacity:0}
+.ll:not([data-status="working"]) .ll__mark{opacity:1}
+.ll__timer{color:var(--mut);font-variant-numeric:tabular-nums}
+@keyframes ll25{0%{opacity:var(--ll-idle)}4%,25%{opacity:1}37%,100%{opacity:var(--ll-idle)}}
+@keyframes ll35{0%{opacity:var(--ll-idle)}4%,35%{opacity:1}47%,100%{opacity:var(--ll-idle)}}
+@keyframes ll45{0%{opacity:var(--ll-idle)}4%,45%{opacity:1}57%,100%{opacity:var(--ll-idle)}}
+@keyframes ll62{0%{opacity:var(--ll-idle)}4%,62%{opacity:1}74%,100%{opacity:var(--ll-idle)}}
+@media(prefers-reduced-motion:reduce){.ll__run .ll__c{animation:none!important;opacity:.55}.dx-btn,.dx-btn *{transition:none!important}}
+.ai-err{margin-top:6px;color:var(--bad)}
 .ai-ans{font-size:15px;line-height:1.85;word-break:break-word}
 .ai-ans p{margin:8px 0}
 .ai-ans .aih{font-family:var(--serif);font-size:16px;margin:16px 0 6px;color:var(--acc)}
@@ -461,9 +501,45 @@ function aiCount(){const el=$("#aiCount"),v=$("#aiPrompt");if(!el||!v)return;con
 function aiFmt(t){const inl=s=>esc(s).replace(/\*\*([^*\n]+)\*\*/g,"<b>$1</b>").replace(/`([^`\n]+)`/g,"<code>$1</code>");let out="",ul=false,ol=false;const close=()=>{if(ul){out+="</ul>";ul=false}if(ol){out+="</ol>";ol=false}};for(const raw of String(t).replace(/\r/g,"").split("\n")){const l=raw.trimEnd();let m;if(!l.trim()){close();continue}if(m=l.match(/^\s*#{1,4}\s+(.*)$/)){close();out+='<h4 class="aih">'+inl(m[1])+"</h4>"}else if(m=l.match(/^\s*[-*•]\s+(.*)$/)){if(ol){out+="</ol>";ol=false}if(!ul){out+='<ul class="ail">';ul=true}out+="<li>"+inl(m[1])+"</li>"}else if(m=l.match(/^\s*\d+[.)、]\s+(.*)$/)){if(ul){out+="</ul>";ul=false}if(!ol){out+='<ol class="ail">';ol=true}out+="<li>"+inl(m[1])+"</li>"}else{close();out+="<p>"+inl(l)+"</p>"}}close();return out}
 function aiHistHtml(){if(!AIHIST.length)return"";return`<div class="card"><div class="row sp"><h3 style="margin:0">本次访问的记录</h3><button class="g s" data-a="aihistclear">清除</button></div><p class="mut" style="margin:4px 0 0;font-size:12px">只保存在当前页面，刷新或退出后消失。</p>${AIHIST.map((h,i)=>`<button class="g ai-hi" data-a="aihist" data-i="${i}"><span class="ai-hq">${esc(h.q.replace(/\s+/g," ").slice(0,60))}</span><span class="mut" style="font-size:12px">${ago(h.ts)}</span></button>`).join("")}</div>`}
 function aiPush(q,a){AIHIST.unshift({q:String(q).slice(0,6000),a,ts:now()});AIHIST=AIHIST.slice(0,5);const b=$("#aiHistBox");if(b)b.innerHTML=aiHistHtml()}
+/* ===== Lattice 点阵加载器（移植自 LatticeLoader.jsx，原生 JS 版） ===== */
+const LL_PATTERNS={
+ arrow:{3:{cells:[1,2,3,0,1,2,1,2,3],loop:7.2,scale:1}},
+ dots:{3:{cells:[0,1,2,0,1,2,0,1,2],loop:3,scale:2.4}},
+ ripple:{3:{cells:[2,1,2,1,0,1,2,1,2],loop:4.8,scale:1.5}},
+ spiral:{3:{cells:[0,1,2,7,8,3,6,5,4],loop:9,scale:1.2,lit:.35}},
+ orbit:{3:{cells:[0,1,2,7,null,3,6,5,4],loop:8,scale:1.2},4:{cells:[0,1,2,3,11,null,null,4,10,null,null,5,9,8,7,6],loop:6,scale:1.2,lit:.45}},
+ snake:{3:{cells:[0,1,2,5,4,3,6,7,8],loop:9,scale:1,lit:.35},4:{cells:[0,1,2,3,7,6,5,4,8,9,10,11,15,14,13,12],loop:16,scale:1,lit:.25}},
+ sweep:{4:{cells:[0,1,2,3,1,2,3,4,2,3,4,5,3,4,5,6],loop:5,scale:1,lit:.45}},
+ spin:{4:{cells:[0,0,1,1,0,0,1,1,3,3,2,2,3,3,2,2],loop:4,scale:1.6,lit:.35}},
+ rain:{4:{cells:[0,2,1,3,1,3,2,4,2,4,3,5,3,5,4,6],loop:4,scale:1.2,lit:.35}},
+ pulse:{4:{cells:[2,1,1,2,1,0,0,1,1,0,0,1,2,1,1,2],loop:2.4,scale:2.5,lit:.45}}
+};
+const LL_DEFAULT={3:"orbit",4:"sweep"};
+const LL_MARKS={3:{done:[2,3,5,7],error:[0,2,4,6,8]},4:{done:[7,8,10,13],error:[0,3,5,6,9,10,12,15]}};
+function llResolve(p,g){if(typeof p==="string"){const x=LL_PATTERNS[p];const r=(x&&x[g])||LL_PATTERNS[LL_DEFAULT[g]][g];return{lit:.62,...r}}const cells=Array.from({length:g*g},(_,i)=>p.cells[i]??null);const mx=Math.max(0,...cells.filter(v=>v!=null));return{cells,loop:p.loop??mx+4.2,scale:p.scale??1,lit:p.lit??.62}}
+function llFmt(ds){return ds<600?(ds/10).toFixed(1)+"s":Math.floor(ds/600)+"m "+((ds%600)/10).toFixed(1)+"s"}
+function latticeLoader(o={}){
+ const O={label:"思考中",doneLabel:"已完成，用时",errorLabel:"失败，用时",pattern:"orbit",grid:3,step:90,showTimer:true,...o};
+ const n=O.grid===4?4:3,pat=llResolve(O.pattern,n),marks=LL_MARKS[n],d=O.step*pat.scale,cycle=Math.round(pat.loop*d);
+ const lit=[25,35,45,62].reduce((a,b)=>Math.abs(b-pat.lit*100)<Math.abs(a-pat.lit*100)?b:a);
+ const el=document.createElement("span");el.className="ll";el.dataset.status="working";el.dataset.lit=String(lit);
+ el.style.setProperty("--ll-n",n);el.style.setProperty("--ll-cycle",cycle+"ms");
+ if(O.cellSize)el.style.setProperty("--ll-cell",O.cellSize+"px");
+ const run=pat.cells.map(u=>u==null?'<span class="ll__c" data-hole></span>':'<span class="ll__c" style="animation-delay:'+Math.round(u*d)+'ms"></span>').join("");
+ const mk=st=>pat.cells.map((_,i)=>'<span class="ll__c"'+(marks[st].includes(i)?" data-on":"")+'></span>').join("");
+ el.innerHTML='<span class="ll__grid" aria-hidden="true"><span class="ll__layer ll__run">'+run+'</span><span class="ll__layer ll__mark">'+mk("done")+'</span></span><span class="ll__label"></span>'+(O.showTimer?'<span class="ll__timer" aria-hidden="true">0.0s</span>':"");
+ const lab=el.querySelector(".ll__label"),tm=el.querySelector(".ll__timer"),mkl=el.querySelector(".ll__mark");
+ lab.textContent=O.label;
+ const t0=performance.now();let ds=0,timer=null;
+ const paint=()=>{ds=Math.floor((performance.now()-t0)/100);if(tm)tm.textContent=llFmt(ds)};
+ timer=setInterval(paint,100);
+ return{el,seconds:()=>ds/10,set(status){if(status==="working")return;if(timer){clearInterval(timer);timer=null}paint();el.dataset.status=status;mkl.innerHTML=mk(status);lab.textContent=status==="done"?O.doneLabel:O.errorLabel},stop(){if(timer){clearInterval(timer);timer=null}}}
+}
+function aiLoading(status){if(!status)return null;const L=latticeLoader({label:"DexunAI 正在思考",doneLabel:"分析完成，用时",errorLabel:"分析失败，用时",pattern:"orbit",grid:3});status.textContent="";status.appendChild(L.el);status.setAttribute("aria-label","DexunAI 正在思考");return L}
+function aiLoadEnd(status,L,st,msg){if(!L)return;L.set(st);if(!status)return;status.textContent="";status.appendChild(L.el);if(msg){const m=document.createElement("div");m.className="ai-err";m.textContent=msg;status.appendChild(m)}}
 function rAI(){const pre=AIPRESETS.map((p,i)=>`<button class="chip" data-a="aipreset" data-i="${i}">${p[0]} ${esc(p[1])}</button>`).join("");
 return`<h2>DexunAI 分析师</h2>
-<div class="card ai-hero"><div class="ai-av" aria-hidden="true">${AIMARK}</div><div style="min-width:0"><div class="ai-nm">DexunAI</div><div class="mut" style="margin-top:2px">你的个人成长分析师：复盘习惯、拆解冲动，把下一步变得具体可做。</div></div></div>
+<div class="card ai-hero"><div class="ai-av" aria-hidden="true">${AIMARK}</div><div class="ai-tx"><div class="ai-nm">DexunAI</div><div class="mut" style="margin-top:2px">你的个人成长分析师：复盘习惯、拆解冲动，把下一步变得具体可做。</div></div><a class="dx-btn" href="https://dexunai.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="打开 DexunAI 网站（新窗口）"><span class="wrap"><p><span>打开网站</span><span>进入 DexunAI ↗</span></p></span></a></div>
 <div class="card"><div class="mut" style="margin-bottom:6px">快速开始：点一下填入问题，可再修改</div><div class="ai-pre">${pre}</div><textarea id="aiPrompt" class="ai-ta" maxlength="6000" aria-label="你想分析的问题" placeholder="例如：帮我分析最近容易失去动力的原因，并给我一个现实可执行的7天计划。">${esc(AIDRAFT)}</textarea><div class="ai-ft"><span id="aiCount">${AIDRAFT.length} / 6000</span><span>${matchMedia("(pointer:coarse)").matches?"":"Ctrl / ⌘ + Enter 发送"}</span></div><label class="ai-sw"><input id="aiContext" type="checkbox" ${AICTX?"checked":""}><span><b>附带我的打卡摘要</b><span class="mut">默认不发送。勾选后只附带下方的统计数字，不包括初心、心情日记和私聊。</span></span></label><div id="aiCtxBox" class="ai-ctxbox" ${AICTX?"":"hidden"}><b style="color:var(--ink)">将发送：</b><br>${aiCtxHtml()}</div><div class="ai-act"><button class="g" data-a="aiclear">清空</button><button class="go" data-a="aianalyze">开始分析</button></div><div id="aiStatus" class="mut" role="status" aria-live="polite" style="margin-top:10px"></div></div>
 <div id="aiResult" class="card" style="${AILAST?"":"display:none"}"><div class="row sp"><h3 style="margin:0">分析结果</h3><button class="g s" data-a="aicopy">复制</button></div><div id="aiAnswer" class="ai-ans" style="margin-top:6px">${AILAST?aiFmt(AILAST):""}</div><p class="mut" style="margin-top:12px;font-size:12px">AI 可能出错，仅供参考。涉及医疗、法律、财务等重要决定，请向合格专业人士核实。</p></div>
 <div id="aiHistBox">${aiHistHtml()}</div>
@@ -476,7 +552,7 @@ async function runAIAnalysis(){
  if(!SB)return toast("后端服务暂时不可用，请稍后重试");
  if(AIBUSY)return;AIBUSY=true;
  const btn=$('[data-a="aianalyze"]');if(btn){btn.disabled=true;btn.textContent="分析中…"}
- if(status){status.textContent="正在分析，请稍候…";status.classList.add("ai-load")}
+ const LL=aiLoading(status);
  const out=$("#aiResult");if(out)out.style.display="none";
  try{
   // All user prompts use the AI path. No local canned answers or keyword-based identity routing.
@@ -518,7 +594,7 @@ ${prompt}`;
   }
   if(!answer)throw new Error("EMPTY_RESPONSE");
   if(answer.length>30000)answer=answer.slice(0,30000);
-  showAIAnswer(answer);aiPush(prompt,answer);
+  showAIAnswer(answer);aiPush(prompt,answer);aiLoadEnd(status,LL,"done");
  }catch(e){
   const msg=String(e?.message||"");let userMessage="分析服务暂时不可用，请稍后重试。";
   if(/SESSION_REQUIRED|AUTH_REQUIRED/.test(msg))userMessage="登录状态已失效，请重新登录后再试。";
@@ -528,8 +604,8 @@ ${prompt}`;
   else if(/AI_TIMEOUT/.test(msg))userMessage="分析超时，请稍后重试。";
   else if(/EMPTY_RESPONSE/.test(msg))userMessage="分析服务没有返回有效内容，请重试。";
   logErr("ai-analysis",new Error(/SESSION_REQUIRED|AUTH_REQUIRED/.test(msg)?"AUTH_REQUIRED":/AI_RATE_LIMITED/.test(msg)?"AI_RATE_LIMITED":/AI_NOT_CONFIGURED/.test(msg)?"AI_NOT_CONFIGURED":"REQUEST_FAILED"));
-  if(status)status.textContent=userMessage;
- }finally{AIBUSY=false;if(btn){btn.disabled=false;btn.textContent="开始分析"}if(status)status.classList.remove("ai-load")}
+  aiLoadEnd(status,LL,"error",userMessage);
+ }finally{AIBUSY=false;if(btn){btn.disabled=false;btn.textContent="开始分析"}if(LL)LL.stop()}
 }
 function nameLink(n){return`<span class="u" role="button" tabindex="0" data-a="prof" data-n="${esc(n)}" aria-label="查看 ${esc(n)} 的主页">${esc(n)}</span>`}
 function feedSig(ps){return(ps||[]).map(p=>[p.id,p.created_at,p.like_count,p.comment_count].join(":" )).join("|")}
